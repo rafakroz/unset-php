@@ -1,8 +1,9 @@
 <?php
+date_default_timezone_set('America/Sao_Paulo');
 
-function saudacao() : string
+function saudacao(): string
 {
-    $hora = 6;
+    $hora = date('H');
 
     if ($hora >= 0 AND $hora <= 5){
         $saudacao = 'Boa magrugada!' . '<br>';

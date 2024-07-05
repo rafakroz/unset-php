@@ -2,7 +2,7 @@
 
 include_once 'helpers.php';
 
-/* Curso de PHP 8 Aula 019 Estrutura de Controle IF */
+/* Curso de PHP 8 Aula 020 Lista de Funções e Métodos */
 
 $texto = 'Teste do index';
 
