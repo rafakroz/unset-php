@@ -3,7 +3,7 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-// Curso de PHP 8 Aula 026 Operador Ternário
+// Aula 026 Operador Ternário
 
 //$valor = 56;
 
