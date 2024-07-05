@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set('America/Sao_Paulo');
 
 /**
  * Função para formatar um número com casas decimais

@@ -5,26 +5,8 @@ include_once 'helpers.php';
 
 // Curso de PHP 8 Aula 027 Definindo Fuso Horário Padrão
 
-//$valor = 56;
+$data = date('d/m/Y H:i:s');
 
-echo formatarValor(150);
+echo $data;
 
-echo '<br>';
-
-echo 'R$' . formatarValor(150);
-
-echo '<br>';
-
-echo formatarNumero(1500);
-
-// if ($valor){
-//     echo $valor;
-// } else {
-//     echo 0;
-// }
-
-// Operador ternário
-// echo $valor ? $valor : 0;
-
-// Opção mais resumida
-//echo $valor ?: 0;
+echo '<hr>';
