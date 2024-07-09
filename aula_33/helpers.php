@@ -1,5 +1,47 @@
 <?php
 
+function dataAtual(): string
+{
+    // Dia do mês
+    $diaMes = date('d');
+    
+    // Dia da semana
+    $diaSemana = date('w');
+    
+    // Mês do ano
+    $mes = date('n');
+    // Aual: $mes = date('n') -1;
+    
+    // Ano
+    $ano = date('Y');
+
+    $nomeDiasDaSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+    
+    /* Aula:
+    $nomeDosMeses = ['Janeiro', Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ];
+    */
+
+    $nomeDosMeses = [
+        1 => 'Janeiro', 
+        2 => 'Fevereiro',
+        3 => 'Março',
+        4 => 'Abril',
+        5 => 'Maio',
+        6 => 'Junho',
+        7 => 'Julho',
+        8 => 'Agosto',
+        9 => 'Setembro',
+        10 => 'Outubro',
+        11 => 'Novembro',
+        12 => 'Dezembro'
+    ];
+
+    $dataFormatada = $nomeDiasDaSemana[$diaSemana] . ', ' . $diaMes . ' de ' . $nomeDosMeses[$mes] . ' de ' . $ano;
+
+    return $dataFormatada;
+}
+
 /**
  * Função que monta a url de acordo com o ambiente
  * @param string $url URL recebida
