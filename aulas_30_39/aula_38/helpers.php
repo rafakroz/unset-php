@@ -7,6 +7,9 @@
  */
 function validarCpf (string $cpf): bool
 {
+    // Limpando a string, para que aceite com ou sem ponto e traço
+    $cpf = limparNumero ($cpf);
+
     if(mb_strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)){
         return false;
     }

@@ -13,12 +13,12 @@ $cpf2 = '00434849138';
 preg_replace: efetua subsituição de string com definição de expressão regular
 */
 
-echo '$cpf: <br>';
+echo '$cpf ['.$cpf.']: <br>';
 var_dump(validarCpf($cpf));
 
 echo '<br><br>';
 
-echo '$cpf2: <br>';
+echo '$cpf2 ['.$cpf2.']: <br>';
 var_dump(validarCpf($cpf2));
 
 //echo $limparNumero = preg_replace('/[^0-9]/', '', $cpf);
