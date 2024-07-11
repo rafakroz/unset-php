@@ -1,0 +1,25 @@
+{
+    "name": "ceounset/cursophp8",
+    "description": "Curso de PHP 8",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "sistema\\": "sistema/"
+        },
+        "files": [
+            "sistema/configuracao.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rafael Queiroz",
+            "email": "rafakroz@gmail.com",
+            "homepage": "https://github.com/rafakroz/unset-php",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0"
+    }
+}
