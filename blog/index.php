@@ -1,12 +1,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <?php
-//use sistema\Nucleo\Helpers;
 
 //Arquivo index responsável pela incialização do sistema
 
+use sistema\Nucleo\Helpers;
+
 require 'vendor/autoload.php';
 
-echo SITE_NOME;
+echo SITE_NOME . '<br>';
 
-//echo Helpers::saudacao();
+echo Helpers::saudacao();

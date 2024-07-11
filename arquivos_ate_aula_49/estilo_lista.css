@@ -1,0 +1,54 @@
+h3{
+    font-family: 'Graphik Trial', sans-serif;
+    font-weight: 600;
+}
+
+li {
+    font-family: 'Graphik Trial', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.topico {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Graphik Trial', sans-serif;
+    font-weight: 600;
+    display: block;
+    background-color: #f0eded;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.topico:hover {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(68, 62, 62);
+    font-family: 'Graphik Trial', sans-serif;
+    font-weight: 600;
+    display: block;
+    background-color: #f0eded;
+}
+
+.link {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 13px;
+    color: firebrick;
+    transition: .2s;
+}
+
+.link:hover {
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 13px;
+    color: rgb(238, 87, 87);
+}
+
+.fa-code, .fa-youtube {
+    margin-left: 5px;
+    margin-right: 5px;
+}
