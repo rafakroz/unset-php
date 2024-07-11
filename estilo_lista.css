@@ -11,7 +11,7 @@ li {
 
 .topico {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     color: black;
     font-family: 'Graphik Trial', sans-serif;
@@ -19,11 +19,12 @@ li {
     display: block;
     background-color: #f0eded;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .topico:hover {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     color: rgb(68, 62, 62);
     font-family: 'Graphik Trial', sans-serif;
@@ -38,7 +39,6 @@ li {
     font-size: 13px;
     color: firebrick;
     transition: .2s;
-    display: block;
 }
 
 .link:hover {
@@ -46,7 +46,6 @@ li {
     margin-left: 10px;
     font-size: 13px;
     color: rgb(238, 87, 87);
-    display: block;
 }
 
 .fa-code, .fa-youtube {
