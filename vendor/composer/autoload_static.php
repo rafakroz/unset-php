@@ -15,12 +15,20 @@ class ComposerStaticInit64321ae7ff90fdb739cc5c3f0b47c3e5
         array (
             'sistema\\' => 8,
         ),
+        'P' => 
+        array (
+            'Pecee\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'sistema\\' => 
         array (
             0 => __DIR__ . '/../..' . '/sistema',
+        ),
+        'Pecee\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pecee/simple-router/src/Pecee',
         ),
     );
 
