@@ -1,0 +1,134 @@
+Instruções Composer:
+
+Passo 1 - Acessar pasta raiz do projeto:
+```
+Acesse a pasta da raiz do projeto e abra um terminal. Ou copie o caminho da pasta no VsCode e acesse-a no terminal.
+```
+
+Passo 2 - Criar o arquivo o arquivo json:
+```
+executar o comando: composer init
+```
+
+Passo 3 - Dar nome ao pacote (package):
+```
+ceounset/cursophp8
+```
+
+Passo 4 - Informar descrição:
+```
+Curso de PHP 8
+```
+
+Passo 5 - Informar o autor:
+```
+xxxxxx
+```
+
+Passo 6 - Informar estabilidade mínima:
+```
+dev
+```
+
+Passo 7 - Informar o tipo de pacote (package):
+```
+project
+```
+
+Passo 8 - Informar a licença:
+```
+Como não há, dar enter
+```
+
+Passo 9 - Definir dependências:
+```
+N para as 2 opções, pois, serão definidas posteriormente.
+```
+
+Passo 10 - Aicionar namespace padrão:
+```
+Enter [vai cirar a pasta src]
+```
+
+Passo 11 - Confirmar as configurações definidas:
+```
+Enter
+```
+
+Passo 12 - Confirmar criação:
+```
+Verificar se as pastas e arquivos foram criadas na raiz do projeto.
+```
+
+Passo 13 - Apagar a pasta src:
+```
+Localizar e apagar a pasta src, pois não será usada.
+```
+
+Passo 14 - No arquivo composer.json, alterar o autoload:
+```
+Alterar o caminho definido na ps4, para o caminho do sistema.
+```
+
+Passo 15 - Verificar possibilidades de alterações no endereço:
+```
+https://getcomposer.org/doc/04-schema.md#json-schema
+```
+
+Passo 16 - (Opcional) Definir autor:
+```
+    "authors": [
+        {
+            "name": "Nils Adermann",
+            "email": "naderman@naderman.de",
+            "homepage": "https://www.naderman.de",
+            "role": "Developer"
+        },
+    ]
+```
+
+Passo 17 - Definir versão mínima do php:
+```
+    "require": {
+        "php": ">=8.0",
+    }
+```
+
+Passo 18 - No arquivo index, inserir o require informado no terminal:
+```
+require 'vendor/autoload.php';
+```
+
+Passo 19 - Atualizar o arquivo composer:
+```
+composer update
+```
+
+Passo 20 - Inserir o arquivo de configuração:
+```
+    "autoload": {
+        "psr-4": {
+            "sistema\\": "sistema/"
+        },
+        "files": [
+            "sistema/configuracao.php"
+        ]
+    },
+```
+
+Passo 20 - Atualizar o arquivo composer:
+```
+composer update
+```
+
+
+```
+
+```
+
+
+
+```
+
+```
+
