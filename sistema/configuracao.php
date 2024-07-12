@@ -6,12 +6,13 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 // Informações do sistema
-define('SITE_NOME', 'UnSet');
-define('SITE_DESCRICAO', 'UnSet - Tecnologia em Sistemas');
+const SITE_NOME = 'UnSet';
+// Forma em desuso: define('SITE_NOME', 'UnSet');
+
+const SITE_DESCRICAO = 'UnSet - Tecnologia em Sistemas';
 
 // urls do sistema
-define('URL_PRODUCAO', 'http://unset.com.br');
-define('URL_DESENVOLVIMENTO', 'http://localhost/blog');
+const URL_PRODUCAO = 'http://unset.com.br';
+const URL_DESENVOLVIMENTO = 'http://localhost/blog';
 
-// Outra forma de definição de constante
-// const SITE_NOME = 'UnSet';
+const URL_SITE = 'unset-php/';

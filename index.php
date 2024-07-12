@@ -3,11 +3,7 @@
 <?php
 
 //Arquivo index responsável pela incialização do sistema
-
 use sistema\Nucleo\Helpers;
 
 require 'vendor/autoload.php';
-
-echo SITE_NOME . '<br>';
-
-echo Helpers::saudacao();
+require 'rotas.php';
