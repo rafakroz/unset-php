@@ -3,7 +3,7 @@
         'name' => 'ceounset/cursophp8',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'bad233402385007bf1266f85c4ee41dce4d7ca1f',
+        'reference' => '81572c89abed79e5fcc5c07457d8b5300cef2288',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'ceounset/cursophp8' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bad233402385007bf1266f85c4ee41dce4d7ca1f',
+            'reference' => '81572c89abed79e5fcc5c07457d8b5300cef2288',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

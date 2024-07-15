@@ -2,6 +2,9 @@
 
 namespace sistema\Support;
 
+use Twig\Lexer;
+use sistema\Nucleo\Helpers;
+
 class Template
 {
     //1 - Criado o atributo twig
@@ -15,13 +18,49 @@ class Template
         
         //4 - Carregamento do diretório
         $this->twig = new \Twig\Environment($loader);
+
+        $lexer = new Lexer($this->twig, [$this->helpers()]);
+
+        $this->twig->setLexer($lexer);
     }
 
     //5 - criada a função para renderizar o template
     //Os dados da array, serão passados para a view, com o método renderizar
-    public function renderizar(string $view, array $dados)
+    public function renderizar(string $view, array $dados): string
     {
         //6 - Retornando o método render do twig
         return $this->twig->render($view, $dados);
     }
+
+    /**
+     * Summary of helpers
+     * @return void
+     */
+    private function helpers(): void
+    {
+        [
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('url', function (string $url = null)
+                    {
+                        return Helpers::url($url);
+                    }
+                )
+            ),
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('saudacao', function ()
+                    {
+                        return Helpers::saudacao();
+                    }
+                )
+            ),
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('resumirTexto', function (string $texto, int $limite)
+                    {
+                        return Helpers::resumirTexto($texto, $limite);
+                    }
+                )
+            )
+        ];
+    }
+
 }
