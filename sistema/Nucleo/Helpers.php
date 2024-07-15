@@ -132,14 +132,12 @@ class Helpers
         //$ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
         if ($servidor == 'localhost:8888'){
-
             $ambiente = URL_DESENVOLVIMENTO_MAC; 
-
-        } elseif ($servidor == 'localhost'){
-
+        }
+        elseif ($servidor == 'localhost'){
             $ambiente = URL_DESENVOLVIMENTO_OUTRO; 
-
-        } else {
+        }
+        else{
             $ambiente = URL_PRODUCAO;
         }
 
