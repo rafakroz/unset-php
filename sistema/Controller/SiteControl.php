@@ -27,4 +27,11 @@ class SiteControl extends Controlador
             'subtitulo' => 'Teste de subtítulo, página sobre'
         ]);
     }
+
+    public function erro404(): void
+    {
+        echo $this->template->renderizar('404.html', [
+            'titulo' => 'Página não encontrada | UnSet'
+        ]);
+    }
 }
