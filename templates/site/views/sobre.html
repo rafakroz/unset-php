@@ -6,6 +6,8 @@
     <title>Sobre</title>
 </head>
 <body>
+    {% include 'header.html' %}
+    <h1>Sobre</h1>
     <div>
         <ul>
             <li>
@@ -17,9 +19,6 @@
             </li>
         </ul>
     </div>
-    <h1>{{titulo}}</h1>
-    <p>{{subtitulo}}</p>
-    <p>{{url('sobre')}}</p>
-    <p>{{saudacao()}}</p>
+    {% include 'footer.html' %}
 </body>
 </html>

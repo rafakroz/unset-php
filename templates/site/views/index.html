@@ -6,6 +6,8 @@
     <title>Home</title>
 </head>
 <body>
+    {% include 'header.html' %}
+    <h1>Index</h1>
     <div>
         <ul>
             <li>
@@ -17,10 +19,6 @@
             </li>
         </ul>
     </div>
-    <h1>{{titulo}}</h1>
-    <h1>{{resumirTexto(titulo, 5)}}</h1>
-    <p>{{subtitulo}}</p>
-    <p>{{url('index')}}</p>
-    <p>{{saudacao()}}</p>
+    {% include 'footer.html' %}
 </body>
 </html>
