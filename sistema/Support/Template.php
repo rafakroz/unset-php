@@ -19,8 +19,10 @@ class Template
         //4 - Carregamento do diretório
         $this->twig = new \Twig\Environment($loader);
 
+        //Array chamando o método privado helpers
         $lexer = new Lexer($this->twig, [$this->helpers()]);
-
+        
+        //
         $this->twig->setLexer($lexer);
     }
 
@@ -33,7 +35,7 @@ class Template
     }
 
     /**
-     * Summary of helpers
+     * Função com as funções que poderão ser utilizadas mas views com o Twig
      * @return void
      */
     private function helpers(): void
