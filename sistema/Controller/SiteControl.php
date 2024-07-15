@@ -15,7 +15,7 @@ class SiteControl extends Controlador
     public function index(): void
     {
         echo $this->template->renderizar('index.html', [
-            'titulo' => 'Teste de Título',
+            'titulo' => 'Home | UnSet',
             'subtitulo' => 'Teste de subtítulo'
         ]);
     }
@@ -23,7 +23,7 @@ class SiteControl extends Controlador
     public function sobre(): void
     {
         echo $this->template->renderizar('sobre.html', [
-            'titulo' => 'Teste de Título, página sobre',
+            'titulo' => 'Sobre | UnSet',
             'subtitulo' => 'Teste de subtítulo, página sobre'
         ]);
     }
