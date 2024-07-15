@@ -13,6 +13,7 @@ const SITE_DESCRICAO = 'UnSet - Tecnologia em Sistemas';
 
 // urls do sistema
 const URL_PRODUCAO = 'http://unset.com.br';
-const URL_DESENVOLVIMENTO = 'http://localhost/blog';
+const URL_DESENVOLVIMENTO_MAC = 'http://localhost:8888/unset-php';
+const URL_DESENVOLVIMENTO_OUTRO = 'http://localhost/unset-php';
 
 const URL_SITE = 'unset-php/';

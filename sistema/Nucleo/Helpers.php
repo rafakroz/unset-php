@@ -127,8 +127,21 @@ class Helpers
      */
     public static function url (string $url = null): string
     {
-        $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
-        $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
+        $servidor = filter_input(INPUT_SERVER, 'HTTP_HOST');
+        //$servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+        //$ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
+
+        if ($servidor == 'localhost:8888'){
+
+            $ambiente = URL_DESENVOLVIMENTO_MAC; 
+
+        } elseif ($servidor == 'localhost'){
+
+            $ambiente = URL_DESENVOLVIMENTO_OUTRO; 
+
+        } else {
+            $ambiente = URL_PRODUCAO;
+        }
 
         if (str_starts_with($url, '/')){
             return $ambiente.$url;
