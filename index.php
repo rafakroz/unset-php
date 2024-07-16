@@ -6,6 +6,12 @@ use sistema\Nucleo\Helpers;
 require 'vendor/autoload.php';
 //require 'rotas.php';
 
-use sistema\Nucleo\Connection;
+use sistema\Model\PostModel;
 
-$con = Connection::getInstancia();
+$posts = (new PostModel())->ler();
+
+foreach ($posts as $post){
+
+    echo $post->title .': ' . $post->text . '<br>';
+
+}
