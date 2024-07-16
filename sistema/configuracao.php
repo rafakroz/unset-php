@@ -5,6 +5,13 @@
 // Definição do fuso horário
 date_default_timezone_set('America/Sao_Paulo');
 
+// Dados para conexão com o banco de dados no Connection
+const DB_HOST = 'localhost';
+const DB_PORT = '3306';
+const DB_NAME = 'blog';
+const DB_USER = 'root';
+const DB_PASSWORD = '';
+
 // Informações do sistema
 const SITE_NOME = 'UnSet';
 // Forma em desuso: define('SITE_NOME', 'UnSet');

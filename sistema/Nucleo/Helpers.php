@@ -7,7 +7,7 @@ use Exception;
 class Helpers
 {
 
-    public static function redirecionar(string $url = null): void
+    public static function redirecionar(string|null $url = null): void
     {
         header('HTTP/1.1 302 Found');
 
@@ -141,21 +141,28 @@ class Helpers
      * @param string $url URL recebida
      * @return string URL modificada
      */
-    public static function url (string $url = null): string
+    public static function url (string|null $url = null): string
     {
         $servidor = filter_input(INPUT_SERVER, 'HTTP_HOST');
         //$servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
         //$ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
-        if ($servidor == 'localhost:8888'){
-            $ambiente = URL_DESENVOLVIMENTO_MAC; 
-        }
-        elseif ($servidor == 'localhost'){
-            $ambiente = URL_DESENVOLVIMENTO_OUTRO; 
-        }
-        else{
-            $ambiente = URL_PRODUCAO;
-        }
+        // if ($servidor == 'localhost:8888'){
+        //     $ambiente = URL_DESENVOLVIMENTO_MAC; 
+        // }
+        // elseif ($servidor == 'localhost'){
+        //     $ambiente = URL_DESENVOLVIMENTO_OUTRO; 
+        // }
+        // else{
+        //     $ambiente = URL_PRODUCAO;
+        // }
+
+        $servidor = match (true) {
+            ($servidor == 'localhost:8888') => $ambiente = URL_DESENVOLVIMENTO_MAC,
+            ($servidor == 'localhost:80') => $ambiente = URL_DESENVOLVIMENTO_OUTRO,
+            ($servidor == 'localhost') => $ambiente = URL_DESENVOLVIMENTO_OUTRO,
+            default => $ambiente = URL_PRODUCAO
+        };
 
         if (str_starts_with($url, '/')){
             return $ambiente.$url;
@@ -275,7 +282,7 @@ class Helpers
      * @return string Valor formatado
      * @author Unset <email>
      */
-    public static function formatarValor (float $valor = null): string
+    public static function formatarValor (float|null $valor = null): string
     {
         return number_format(($valor ? $valor : 0), 2, ',','.');
     }
@@ -286,7 +293,7 @@ class Helpers
      * @return string Número formatado
      * @author Unset <email>
      */
-    public static function formatarNumero (int $numero = null): string
+    public static function formatarNumero (int|null $numero = null): string
     {
         return number_format($numero ? $numero : 0, 0, ',', '.');
     }
