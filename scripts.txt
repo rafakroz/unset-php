@@ -1,0 +1,13 @@
+Criar database: blog
+
+CREATE TABLE `blog`.`posts` (
+	`id` INT NOT NULL AUTO_INCREMENT , 
+	`title` VARCHAR(255) NOT NULL , 
+	`text` TEXT NULL , 
+	`status` INT NOT NULL DEFAULT '0' , 
+	PRIMARY KEY (`id`)) ENGINE = InnoDB;
+	
+INSERT INTO `posts` (`id`, `title`, `text`, `status`) VALUES (NULL, 'titulo do post 1', 'texto do post 1', '1'), (NULL, 'titulo do post 2', 'texto do post 2', '1')
+
+INSERT INTO posts (title, text, status) VALUES ('titulo do post 3', 'texto do post 3', 1);
+INSERT INTO posts (title, text, status) VALUES ('titulo do post 4', 'texto do post 4', 1);
