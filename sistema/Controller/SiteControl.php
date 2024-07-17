@@ -2,8 +2,8 @@
 
 namespace sistema\Controller;
 
-use  sistema\Nucleo\Controlador;
-use sistema\Support\Template;
+use sistema\Nucleo\Controlador;
+use sistema\Model\PostModel;
 
 class SiteControl extends Controlador
 {
@@ -14,9 +14,10 @@ class SiteControl extends Controlador
 
     public function index(): void
     {
+        $posts = (new PostModel())->ler();
+
         echo $this->template->renderizar('index.html', [
-            'titulo' => 'Home | UnSet',
-            'subtitulo' => 'Teste de subtítulo'
+            'posts' => $posts
         ]);
     }
 
