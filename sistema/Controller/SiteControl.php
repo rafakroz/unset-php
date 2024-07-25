@@ -4,6 +4,7 @@ namespace sistema\Controller;
 
 use sistema\Nucleo\Controlador;
 use sistema\Model\PostModel;
+use sistema\Nucleo\Helpers;
 
 class SiteControl extends Controlador
 {
@@ -14,10 +15,23 @@ class SiteControl extends Controlador
 
     public function index(): void
     {
-        $posts = (new PostModel())->ler();
+        $posts = (new PostModel())->busca();
 
         echo $this->template->renderizar('index.html', [
             'posts' => $posts
+        ]);
+    }
+
+    public function post (int $id): void
+    {
+        $post = (new PostModel())->buscaPorId($id);
+
+        if ( ! $post ){
+            Helpers::redirecionar('404');
+        }
+
+        echo $this->template->renderizar('post.html', [
+            'post' => $post
         ]);
     }
 

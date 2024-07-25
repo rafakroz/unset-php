@@ -10,6 +10,7 @@ try {
     SimpleRouter::get(URL_SITE, 'SiteControl@index');
     SimpleRouter::get(URL_SITE.'sobre', 'SiteControl@sobre');
     SimpleRouter::get(URL_SITE.'404', 'SiteControl@erro404');
+    SimpleRouter::get(URL_SITE.'post/{id}', 'SiteControl@post');
 
     // Para as rotas funcionarem
     SimpleRouter::start(); 

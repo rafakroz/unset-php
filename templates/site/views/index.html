@@ -8,12 +8,14 @@
                 <div class="col-md-3">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title">{{post.title}}</h5>
-                            <p class="card-text">{{resumirTexto(post.text, 150)}}</p>
+                            <a href="{{url('post/'~post.id)}}">
+                                <h5 class="card-title">{{post.title}}</h5>
+                                <p class="card-text">{{resumirTexto(post.text, 150)}}</p>
+                            </a>
                         </div>
                     </div>
                 </div>   
-            {% endfor %}
+            {% endfor %} 
         </div>   
     </div>
 
